@@ -1,0 +1,46 @@
+.converter-container {
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+  margin-bottom: 10vh;
+}
+
+.input-holder {
+  background-color: var(--american-blue);
+  width: 100%;
+  height: fit-content;
+  border-top: 10px solid var(--american-blue);
+  border-bottom: 10px solid var(--american-blue);
+}
+
+.input-holder > * {
+  border: none;
+  padding: 1rem;
+}
+
+.units {
+  background-color: var(--american-red);
+  color: white;
+}
+
+input {
+  border: none;
+}
+
+.converter-container p {
+  color: black;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

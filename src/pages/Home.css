@@ -1,0 +1,59 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.bar {
+  width: 100%;
+  height: 80px;
+  background-color: var(--american-dark-blue);
+  display: grid;
+  place-items: center;
+}
+
+.introduction {
+  padding: 2rem;
+}
+
+.quote {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff25;
+}
+
+.quote-pic {
+  background-image: url("https://www.whitehouse.gov/wp-content/uploads/2021/01/26_theodore_roosevelt.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 150px;
+  background-position: center;
+}
+
+.quote-text {
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 768px) {
+  .quote {
+    flex-direction: row;
+    height: 200px;
+  }
+  .quote-pic {
+    width: 150px;
+    height: 100%;
+  }
+
+  .quote-text {
+    width: calc(100% - 150px);
+    font-size: 2rem;
+  }
+}

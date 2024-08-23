@@ -34,6 +34,10 @@ const units: Unit[] = [
   { name: "Pancakes", sizeInMeters: 0.0127 },
   { name: "Hog Dogs", sizeInMeters: 1.524 },
   { name: "Horses", sizeInMeters: 1.524 },
+  { name: "Eastern Grey Kangaroo", sizeInMeters: 2 },
+  { name: "Minecraft Llama Spit", sizeInMeters: 0.25 },
+  { name: "Bee Sting", sizeInMeters: 0.00255 },
+  { name: "Snevira", sizeInMeters: 0.5 },
 ];
 
 const Converter: React.FC = () => {
@@ -51,51 +55,43 @@ const Converter: React.FC = () => {
 
   return (
     <div className="converter-container">
-      <div className="banner"></div>
-      <div className="converter-tool">
-        <div className="guns"></div>
-        <div className="input-holder">
-          <select
-            className="from-unit units"
-            value={fromUnit.name}
-            onChange={(e) =>
-              setFromUnit(units.find((unit) => unit.name === e.target.value)!)
-            }
-          >
-            {units.map((unit) => (
-              <option key={unit.name} value={unit.name}>
-                {unit.name}
-              </option>
-            ))}
-          </select>
-          <input
-            type="number"
-            value={inputValue}
-            onChange={(e) => setInputValue(parseFloat(e.target.value))}
-          />
-          <select
-            className="units"
-            value={toUnit.name}
-            onChange={(e) =>
-              setToUnit(units.find((unit) => unit.name === e.target.value)!)
-            }
-          >
-            {units.map((unit) => (
-              <option key={unit.name} value={unit.name}>
-                {unit.name}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <p>
-            Converted Value: {handleConversion()} {toUnit.name}
-          </p>
-        </div>
+      <div className="input-holder">
+        <select
+          className="from-unit units"
+          value={fromUnit.name}
+          onChange={(e) =>
+            setFromUnit(units.find((unit) => unit.name === e.target.value)!)
+          }
+        >
+          {units.map((unit) => (
+            <option key={unit.name} value={unit.name}>
+              {unit.name}
+            </option>
+          ))}
+        </select>
+        <input
+          type="number"
+          value={inputValue}
+          onChange={(e) => setInputValue(parseFloat(e.target.value))}
+        />
+        <select
+          className="units"
+          value={toUnit.name}
+          onChange={(e) =>
+            setToUnit(units.find((unit) => unit.name === e.target.value)!)
+          }
+        >
+          {units.map((unit) => (
+            <option key={unit.name} value={unit.name}>
+              {unit.name}
+            </option>
+          ))}
+        </select>
       </div>
-      <div className="eagle"></div>
-      <div className="army-man"></div>
+
+      <p>
+        Converted Value: {handleConversion()} {toUnit.name}
+      </p>
     </div>
   );
 };

@@ -1,19 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  --american-dark-blue: #1f284a;
+  --american-blue: #2f3f58;
+  --american-red: #b90909;
 }
 
 body {
-  background-image: linear-gradient(
-    to bottom,
-    white,
-    white 100px,
-    #e04040 100px,
-    #e04040
-  );
-  background-size: 100% 200px;
-  overflow: hidden;
+  background-color: var(--american-blue);
+  background-image: url("https://cdn.discordapp.com/attachments/1232761498170953749/1276520133623550076/Surface_Pro_8_-_1.png?ex=66c9d384&is=66c88204&hm=5690f999afa74ba5e6ec33fd5493c4b00d8b452044dea3832e40194e5b3984c9&");
+  background-size: cover;
 }

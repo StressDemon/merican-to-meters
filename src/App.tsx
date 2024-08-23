@@ -1,8 +1,12 @@
 import "./App.css";
-import Converter from "./pages/Converter";
+import Home from "./pages/Home";
 
 function App() {
-  return <Converter />;
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;
