@@ -40,6 +40,9 @@ const units: Unit[] = [
   { name: "Snevira", sizeInMeters: 0.5 },
   { name: "BeardsofFuryGaming", sizeInMeters: 1.8796000000000002 },
   { name: "MagiksWorld", sizeInMeters: 0.1 },
+  { name: "AR-15", sizeInMeters: 0.22225 },
+  { name: "American Flag", sizeInMeters: 1.524 },
+  { name: "Large KFC Wings Bucket", sizeInMeters: 0.254 },
 ];
 
 const sortedUnits = units.sort((a, b) => a.name.localeCompare(b.name));
