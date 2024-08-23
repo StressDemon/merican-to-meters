@@ -40,10 +40,17 @@ const units: Unit[] = [
   { name: "Snevira", sizeInMeters: 0.5 },
 ];
 
+const sortedUnits = units.sort((a, b) => a.name.localeCompare(b.name));
+
 const Converter: React.FC = () => {
   const [inputValue, setInputValue] = useState<number>(0);
-  const [fromUnit, setFromUnit] = useState<Unit>(units[0]);
-  const [toUnit, setToUnit] = useState<Unit>(units[5]);
+
+  const [fromUnit, setFromUnit] = useState<Unit>(
+    sortedUnits.find((unit) => unit.name === "Meters")!
+  );
+  const [toUnit, setToUnit] = useState<Unit>(
+    sortedUnits.find((unit) => unit.name === "Bald Eagles")!
+  );
 
   const handleConversion = (): number => {
     if (fromUnit.name === toUnit.name) {
@@ -60,10 +67,12 @@ const Converter: React.FC = () => {
           className="from-unit units"
           value={fromUnit.name}
           onChange={(e) =>
-            setFromUnit(units.find((unit) => unit.name === e.target.value)!)
+            setFromUnit(
+              sortedUnits.find((unit) => unit.name === e.target.value)!
+            )
           }
         >
-          {units.map((unit) => (
+          {sortedUnits.map((unit) => (
             <option key={unit.name} value={unit.name}>
               {unit.name}
             </option>
@@ -78,10 +87,10 @@ const Converter: React.FC = () => {
           className="units"
           value={toUnit.name}
           onChange={(e) =>
-            setToUnit(units.find((unit) => unit.name === e.target.value)!)
+            setToUnit(sortedUnits.find((unit) => unit.name === e.target.value)!)
           }
         >
-          {units.map((unit) => (
+          {sortedUnits.map((unit) => (
             <option key={unit.name} value={unit.name}>
               {unit.name}
             </option>
