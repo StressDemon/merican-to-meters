@@ -1,5 +1,5 @@
 import "./App.css";
-import Converter from "./components/Converter";
+import Converter from "./pages/Converter";
 
 function App() {
   return <Converter />;
