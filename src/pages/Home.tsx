@@ -21,7 +21,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <Converter />
-      <div className="bar">
+      <div className="bar bar-bot">
         This site was made for humour purposes, please don't get mad :(
       </div>
     </div>
